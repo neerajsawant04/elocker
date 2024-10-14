@@ -1,6 +1,6 @@
 # eLocker - Secure File Storage
 
-eLocker is a secure platform that allows users to upload, store, and manage their files online, similar to Digilocker. Built using Node.js and AWS S3, eLocker provides a user-friendly interface for accessing files anytime, anywhere.
+eLocker is a secure platform that allows users to upload, store, and manage their files online. Built using Node.js and AWS S3, eLocker provides a user-friendly interface for accessing files anytime, anywhere.
 
 ## Table of Contents
 - [Features](#features)
@@ -22,7 +22,7 @@ eLocker is a secure platform that allows users to upload, store, and manage thei
 ### Prerequisites
 - [Node.js](https://nodejs.org/) installed on your machine
 - An AWS account with S3 permissions
-- Basic knowledge of JavaScript and Node.js
+- Basic knowledge of JavaScript/Typescript and Node.js
 
 ### Installation
 1. Clone the repository:
