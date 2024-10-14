@@ -1,24 +1,41 @@
-#  eLocker a File Upload to AWS S3
+# eLocker - Secure File Storage
 
-This is a simple web application that allows users to upload files, which are then stored in an AWS S3 bucket. The backend is built with Node.js, and the frontend is a basic HTML form.
+eLocker is a secure platform that allows users to upload, store, and manage their files online, similar to Digilocker. Built using Node.js and AWS S3, eLocker provides a user-friendly interface for accessing files anytime, anywhere.
+
+## Table of Contents
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
 
 ## Features
-- Upload files to AWS S3
-- Simple Node.js server using Express
-- Uses Multer for handling file uploads
+- **Secure File Uploading**: Users can easily upload files to their eLocker.
+- **File Retrieval**: Retrieve a list of stored files with direct access links.
+- **CORS Support**: Allows secure access from different origins.
 
-## Requirements
-- Node.js
-- AWS S3 bucket and credentials
-- npm (Node Package Manager)
+## Technology Stack
+- **Frontend**: HTML, CSS, JavaScript (or a frontend framework like React)
+- **Backend**: Node.js, Express.js
+- **Cloud Storage**: Amazon S3 for secure file storage
 
-## How to Run Locally
-1. Clone this repository:
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) installed on your machine
+- An AWS account with S3 permissions
+- Basic knowledge of JavaScript and Node.js
+
+### Installation
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/elocker-Secure-Storage-AWS.git
-# elocker
-# elocker
-# elocker
-# elocker-Secure-Storage-AWS
-# elocker-Secure-Storage-AWS
-# elocker-Secure-Storage-AWS
+   git clone https://github.com/neerajsawant04/elocker-Secure-Storage-AWS.git
+   cd elocker
+   npm install
+2. Create a .env file in the root directory and add your AWS configuration:
+   ```bash
+      AWS_REGION=your_aws_region
+      AWS_S3_BUCKET_NAME=your_bucket_name
+      AWS_ACCESS_KEY_ID=your_access_key
+      AWS_SECRET_ACCESS_KEY=your_secret_key
+3. Start the server:
+   ```bash
+    node app.js
