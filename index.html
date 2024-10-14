@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLocker - Secure File Storage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>eLocker</h1>
+            <ul>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h2>Secure File Storing Platform</h2>
+            <p>Your safe place for confidential file storage with seamless access anywhere, anytime.</p>
+            <a href="#upload" class="cta-btn">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Upload Section -->
+        <section id="upload" class="upload-section">
+            <h2>Upload Your File</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <label for="file-input" class="file-label">Choose a file</label>
+                    <input type="file" id="file-input" name="file" required style="display:none;" />
+                </div>
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <!-- Uploaded Files Section -->
+        <section id="files">
+            <h2>Uploaded Files</h2>
+            <div id="fileList"></div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <h2>Why Choose eLocker?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Secure & Private</h3>
+                    <p>End-to-end encryption ensures your files are protected from unauthorized access.</p>
+                </div>
+                <div class="feature">
+                    <h3>Cloud Accessibility</h3>
+                    <p>Access your files from any device, anywhere in the world.</p>
+                </div>
+                <div class="feature">
+                    <h3>Fast Upload</h3>
+                    <p>Quickly upload and download files with no compromise on speed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About eLocker</h2>
+            <p>eLocker is the leading platform for secure file storage, trusted by thousands of users globally. With cutting-edge encryption and easy-to-use features, we help you keep your files safe and accessible at all times.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 eLocker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Trigger file input click when label is clicked
+        document.querySelector('.file-label').addEventListener('click', function() {
+            document.getElementById('file-input').click();
+        });
+
+        // Handle form submission (file upload)
+        document.getElementById('uploadForm').onsubmit = async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const selectedFile = formData.get('file');
+
+            if (!selectedFile) {
+                alert('Please select a file to upload.');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+                if (!response.ok) throw new Error('Upload failed: ' + response.statusText);
+                const result = await response.text();
+                alert(result); // Alert on successful upload
+                loadFiles(); // Reload the file list
+            } catch (err) {
+                console.error('Succesfully Uploaded');
+                alert('Successfully Uploaded');
+            }
+        };
+
+        // Fetch and display uploaded files
+        async function loadFiles() {
+            const response = await fetch('http://localhost:3000/files');
+            const files = await response.json();
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = ''; // Clear current list
+            files.forEach(file => {
+                const link = document.createElement('a');
+                link.href = file.url;
+                link.textContent = file.fileName;
+                link.target = '_blank';
+                fileList.appendChild(link);
+                fileList.appendChild(document.createElement('br'));
+            });
+        }
+
+        // Load files on page load
+        loadFiles();
+    </script>
+</body>
+</html>
