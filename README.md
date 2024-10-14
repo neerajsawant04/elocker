@@ -15,7 +15,7 @@ This is a simple web application that allows users to upload files, which are th
 ## How to Run Locally
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/digilocker-file-upload.git
+   git clone https://github.com/your-username/elocker-Secure-Storage-AWS.git
 # elocker
 # elocker
 # elocker
