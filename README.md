@@ -1,4 +1,4 @@
-# eLocker - Secure File Storage
+# eLocker - A Secure File Storing Platform.
 
 eLocker is a secure platform that allows users to upload, store, and manage their files online. Built using Node.js and AWS S3, eLocker provides a user-friendly interface for accessing files anytime, anywhere.
 
