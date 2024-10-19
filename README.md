@@ -10,10 +10,10 @@ eLocker is a secure platform that allows users to upload, store, and manage thei
 ## Features
 - **Secure File Uploading**: Users can easily upload files to their eLocker.
 - **File Retrieval**: Retrieve a list of stored files with direct access links.
-- **CORS Support**: Allows secure access from different origins.
+
 
 ## Technology Stack
-- **Frontend**: HTML, CSS, JavaScript (or a frontend framework like React)
+- **Frontend**: HTML, CSS, JavaScript.
 - **Backend**: Node.js, Express.js
 - **Cloud Storage**: Amazon S3 for secure file storage
 
