@@ -40,11 +40,3 @@ eLocker is a secure platform that allows users to upload, store, and manage thei
    ```bash
     node app.js
 
-<img width="1440" alt="Home Page" src="https://github.com/user-attachments/assets/c12c42bb-fff6-4093-9358-c954899f3145">
-<img width="1439" alt="Select File" src="https://github.com/user-attachments/assets/a28d83e9-9697-4536-aeaa-d2b708a12a8b">
-<img width="1440" alt="AWS S3" src="https://github.com/user-attachments/assets/295b20f2-f4df-46a3-ab86-35edcf85411c">
-<img width="1440" alt="About" src="https://github.com/user-attachments/assets/f48f062a-3182-4a01-9fd8-d357d47857e2">
-
-
-
-
