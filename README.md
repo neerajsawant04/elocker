@@ -14,7 +14,7 @@ eLocker is a secure platform that allows users to upload, store, and manage thei
 
 ## Technology Stack
 - **Frontend**: HTML, CSS, JavaScript.
-- **Backend**: Node.js, Express.js
+- **Backend**: Node.js, Express.js, Multer.
 - **Cloud Storage**: Amazon S3 for secure file storage
 
 ## Getting Started
