@@ -39,4 +39,3 @@ eLocker is a secure platform that allows users to upload, store, and manage thei
 3. Start the server:
    ```bash
     node app.js
-
